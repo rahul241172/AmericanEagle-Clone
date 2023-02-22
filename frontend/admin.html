@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img id="logo" src="https://i.ibb.co/3mBvfKy/fashion-mink-high-resolution-logo-black-on-white-background.jpg" alt="logo" />
+            <h2>Admin Portal</h2>
+        </div>
+    </nav>
+    <div id="top">
+        <div id="left">
+            <div class="row">
+                <h1>Admin Panel</h1>
+                <button class="show-user-details button-primary buttons">
+                    Show User Details
+                </button>
+                <hr />
+
+
+                <button class="show-products button-primary buttons">
+                    Show Products
+                </button>
+                <button class="add-products button-primary">
+                    Add Product
+                </button>
+                <hr>
+               
+            </div>
+        </div>
+        <div class="columns eight main">
+            <h1>Data List</h1>
+            <div class="notifications-wrapper" id="notifications-wrapper">
+                <p>Something Went Wrong Please reload the Page</p>
+            </div>
+            <div class="data-list-wrapper">
+                <!-- Showing Data in this div -->
+            </div>
+            <div class="pagination-section">
+                <!-- Showing Pagination Buttons in this div -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/admin.js"></script>
+</body>
+
+</html>
