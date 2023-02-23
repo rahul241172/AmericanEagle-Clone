@@ -205,3 +205,41 @@ menstshirt.addEventListener("click",()=>{
         }
     })
 })
+
+
+//  search functionality
+
+let searchbutton=document.getElementById("search-button")
+
+searchbutton.addEventListener("click",()=>{
+    let searchvalue=document.getElementById("search-value").value
+    if(searchvalue=="me" || searchvalue=="mens" ||searchvalue=="womens" || searchvalue=="wo"){
+search()
+    async function search() {
+        try {
+            let res = await fetch(`${baseUrl}/products?category=${searchvalue}`);
+            let data = await res.json();
+            let count = data.length
+        getData(data)
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+}
+    else{
+        search()
+    async function search() {
+        try {
+            let res = await fetch(`${baseUrl}/products?type=${searchvalue}`);
+            let data = await res.json();
+            let count = data.length
+        getData(data)
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+    }
+    
+})

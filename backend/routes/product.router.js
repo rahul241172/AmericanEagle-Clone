@@ -6,14 +6,28 @@ const {authorization}=require("../middleware/authorization")
 
 
 products.get("/",async(req,res)=>{
-    // const{q="",page=1,limit=10}=req.query
-            try{
-                let data=await ProductModel.find()
+    let q=req.query
+    var z={}
+        try{
+            if(q.category){
+                z.category={$regex:q.category,$options:"i"}
+                let data=await ProductModel.find(z)
                 res.send(data)
-               }catch(err){
+            }
+            else if(q.type){
+                z.type={$regex:q.type,$options:"i"}
+                let data=await ProductModel.find(z)
+                res.send(data)
+            }
+           else{
+                let data=await ProductModel.find(z)
+                res.send(data)
+               }
+            }catch(err){
                 console.log(err)
                }
             })
+
 products.get("/mens",async(req,res)=>{
     // const{q="",page,limit}=req.query
                 try{
