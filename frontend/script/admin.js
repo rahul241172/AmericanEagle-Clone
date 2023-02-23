@@ -57,6 +57,8 @@ showButton.addEventListener("click", async function () {
         let res = await fetch(`${baseUrl}/products`);
         let data = await res.json();
         getData(data);
+       let length=document.getElementById("data-length")
+       length.innerText=`Total:${data.length}`
     } catch (error) {
         console.log(error)
     }
@@ -64,7 +66,7 @@ showButton.addEventListener("click", async function () {
 
 
 
-function getAsCard(id, image, price, name, type, category, identifier) {
+function getAsCard(id, image, price, name, type, category) {
     return `
         <div class="card-wrapper">
         <img src="${image}" alt="image">
@@ -72,10 +74,11 @@ function getAsCard(id, image, price, name, type, category, identifier) {
         <span>Id</span><br><input id="user" value="${id}"  readonly>
         <span>Name</span><input id="name" value="${name}"  readonly>
         <span>Price</span><input id="price" value="${price}"  readonly>
-        <span>Type</span><input value="${type}"  readonly>
-        <span>Category</span><input value="${category}"  readonly>
+        <span>Type</span><input id="type" value="${type}"  readonly>
+        <span>Category</span><input id="category" value="${category}"  readonly>
           <div class="list-buttons">
-          <button class="delete-data" data-id="${id}" data-identifier="${identifier}">Delete Product</button>
+          <button class="delete-data" data-id="${id}" >Delete Product</button>
+          <button class="edit-data" data-id="${id}" >Edit</button>
           </div>
         </div>
     `;
@@ -106,14 +109,6 @@ function getData(data) {
             deleteFunction(data)
         })
     }
-    
-    // let editData= document.querySelectorAll(".edit-data");
-    // for (let editButton of editData) {
-    //     editButton.addEventListener("click", function (element) {
-    //         let data = element.target.dataset.id;
-    //         editFunction(data)
-    //     })
-    // };
 
 }
 
@@ -131,6 +126,18 @@ async function deleteFunction(data) {
     }
 }
 
+
+
+
+
+
+let editData= document.querySelectorAll(".edit-data");
+    for (let editButton of editData) {
+        editButton.addEventListener("click", function (element) {
+            let data = element.target.dataset.id;
+            editFunction(data)
+        })
+    };
 // async function editFunction(data) {
 //     try {
 
@@ -147,7 +154,7 @@ async function deleteFunction(data) {
 
 async function Fetching() {
     try {
-        let res = await fetch(`${baseUrl}/products/all`);
+        let res = await fetch(`${baseUrl}/products`);
         let data = await res.json();
         getData(data);
         }

@@ -4,17 +4,824 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script> $(function(){
-        $(`#Nav`).load(`navbar.html`)
-    })</script>
-     <script> $(function(){
-        $(`#footer`).load(`footer.html`)
-    })</script>
-    <title>menpage</title>
+    <!-- Mens css -->
+    <link rel="stylesheet" href="./css/men.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <title>Mens page</title>
 </head>
 <body>
-    <div id="Nav"></div>
-    <div id="footer"></div>
+    <!-- Nav bar -->
+    <div class="nav-top">
+        <p>
+          <a href="#"><u class="uline">E-Gift Card</u></a>
+        </p>
+        <p>
+          <a href="#"><u class="uline">Store Locator</u></a>
+        </p>
+        <p>
+          <a href="trackorder.html" ><u class="uline">Track Order</u></a>
+        </p>
+          <div class="dropdown bg">
+            <a class="dropbtn selectColor" href="#"><u class="uline">My Aeo</u></a>
+  
+            <div class="dropdown-content">
+              <br>
+              <button class="signinBtn modal-btn">Sign in</button>
+              <!--Modal -->
+              <div class="modal-bg">
+                <div class="modal">
+                  <br>
+                  <div class="black"></div>
+                  <h1>Welcome To</h1>
+                  <h1 style="font-weight: 600;">Fashion Mink</h1>
+                  <br><br>
+                  <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
+                  <br><br>
+                  <input id="email" type="email" name="email" placeholder="Enter email / mobile number">
+                  <br><br>
+                  <input id="pass" type="password" placeholder="Enter password">
+                  <br><br>
+                  <button class="signInn">Sign In</button>
+                  <br><br>
+                  <h2 style="text-align: center;">Or</h2>
+                  <a href="admin.html" id="admin"><h2>Login as Admin</h2></a>
+                  <span class="modal-close">X</span>
+                </div>
+              </div>
+              <a href="#"><u class="uline">AEO Credits</u></a>
+              <a href="#"><u class="uline">Online Orders History</u></a>
+              <a href="#"><u class="uline">Giftcard Order History</u></a>
+              <a href="#"><u class="uline">Account Settings</u></a>
+              <a href="#"><u class="uline">Shipping Addresses</u></a>
+              <a href="#"><u class="uline">Change Password</u></a>
+              <hr />
+              <br />
+              <p>&nbsp;&nbsp;Don't have an account?</p>
+              <p>&nbsp;&nbsp;No problem..</p>
+              <a href="#" class="modal-btn1"><u>Create account</u></a>
+              <!--Modal -->
+              <div class="modal-bg1">
+                <div class="modal1">
+                  <br>
+                  <div class="black"></div>
+                  <h1>WELCOME TO</h1>
+                  <h1 style="font-weight: 600;">AMERICAN EAGLE</h1>
+                  <br><br>
+                  <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
+                  <br><br>
+                  <input id="name" type="text" name="name" placeholder="Enter name">
+                  <br><br>
+                  <input id="email1" type="email" name="email" placeholder="Enter email / mobile number">                 
+                  <br><br>
+                  <input id="pass1" type="password" placeholder="Enter password">
+                  <br><br>
+                  <button class="next">NEXT</button>
+                  <br><br>
+                  <h5>LOGIN WITH SOCIAL MEDIA</h5>
+                  <br><br>
+                  <button class="google"><i class="fa fa-google" aria-hidden="true"></i>&nbsp;Google</button>
+                  <span class="modal-close1">X</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <p>
+          <a href="#" title="Favorites"
+            ><i class="fa fa-heart"></i>&nbsp;<u class="uline">Favorites</u></a
+          >
+        </p>
+        <p>
+          <a href="checkout.html" title="Items">
+            <img
+              height="12px"
+              width="12px"
+              src="https://www.freepnglogos.com/uploads/shopping-bag-png/google-white-shopping-bag-icon-kalost-14.png"
+              alt=""
+            />
+            <u>0</u><u class="uline">items</u></a
+          >
+        </p>
+      </div>
+          <div class="navbar_sticky">
+          <div class="menubar">
+            <a href="index.html">
+                    <img id="main-logo" src="https://i.ibb.co/3mBvfKy/fashion-mink-high-resolution-logo-black-on-white-background.jpg" alt="">
+                   </a>
+            <ul>
+              <li class="active">
+                <a class="hover1" href="#">Men</a>
+                <div class="submenu-1">
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>TOPS</h5></a>
+                      </li>
+                      <li><a href="#">T-Shirts</a></li>
+                      <li><a href="#">Graphic Tees</a></li>
+                      <li><a href="#">Polo Shirts</a></li>
+                      <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Jackets</a></li>
+                      <li><a href="#">Hoodies & Sweatshirts</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>BOTTOMS</h5></a>
+                      </li>
+                      <li><a href="#">Jeans</a></li>
+      
+                      <li><a href="#">Shorts</a></li>
+                      <li><a href="#">Joggers</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>UNDERWEAR</h5></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
+                      </li>
+                      <li><a href="#">Shoes</a></li>
+                      <li><a href="#">Socks</a></li>
+                      <li><a href="#">Belts</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>FEATURED</h5></a>
+                      </li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li><a href="#">Airflex shop</a></li>
+                      <li><a href="#">Ripped Jeans</a></li>
+                      <li><a href="#">The Logo Shop</a></li>
+                      <li><a href="#">Stripe Edit</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+      
+              <li class="active">
+                <a class="hover1" href="women.html">Women</a>
+                <div class="submenu-1">
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>TOPS</h5></a>
+                      </li>
+                      <li><a href="#">T-Shirts</a></li>
+                      <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Sweaters & Cardigans</a></li>
+                      <li><a href="#">Jackets</a></li>
+                      <li><a href="#">Hoodies & Sweatshirts</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>BOTTOMS</h5></a>
+                      </li>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Shorts</a></li>
+                      <li><a href="#">Pants</a></li>
+                      <li><a href="#">Skirts</a></li>
+                      <li><a href="#">Joggers</a></li>
+                    </ul>
+                  </div>
+      
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>DRESSES</h5></a>
+                      </li>
+                      <li><a href="#">Jumpsuits</a></li>
+                      <li><a href="#">Midi & Maxi Dresses</a></li>
+                      <li><a href="#">Mini Dresses</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
+                      </li>
+                      <li><a href="#">Shoes</a></li>
+                      <li><a href="#">Socks</a></li>
+                      <li><a href="#">Sunglasses</a></li>
+                      <li><a href="#">Belts</a></li>
+                      <li><a href="#">Bags</a></li>
+                      <li><a href="#">Jewelry</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>DRESSES</h5></a>
+                      </li>
+                      <li><a href="#">Jumpsuits</a></li>
+                      <li><a href="#">Midi & Maxi Dresses</a></li>
+                      <li><a href="#">Mini Dresses</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>FEATURED</h5></a>
+                      </li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li><a href="#">Crop Edit</a></li>
+                      <li><a href="#">Ripped Jeans</a></li>
+                      <li><a href="#">The Logo Shop</a></li>
+                      <li><a href="#">Curvy Destination</a></li>
+                      <li><a href="#">Dream Jeans</a></li>
+                      <li><a href="#">The Dress Shop</a></li>
+                      <li><a href="#">Stripe Edit</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="active">
+                <a class="hover1" href="jeans.html">Jeans</a>
+                <div class="submenu-1">
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>MENS JEANS</h5></a>
+                      </li>
+                      <li><a href="#">Skinny Jeans</a></li>
+                      <li><a href="#">Slim Jeans</a></li>
+                      <li><a href="#">Straight Jeans</a></li>
+                      <li><a href="#">Airflex Jeans</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>WOMENS JEANS</h5></a>
+                      </li>
+                      <li><a href="#">Jeggings</a></li>
+                      <li><a href="#">Bootcut Jeans</a></li>
+                      <li><a href="#">Girlfriend Jeans</a></li>
+                      <li><a href="#">Skinny Jeans</a></li>
+                      <li><a href="#">Mom Jeans</a></li>
+                      <li><a href="#">Tomgirl Jeans</a></li>
+                      <li><a href="#">Curvy Jeans</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="active">
+                <a class="hover1" style="color: red;">Sale</a>
+                <div class="submenu-1">
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>MENS SALE</h5></a>
+                      </li>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Bottoms</a></li>
+                      <li><a href="#">Jeans</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5>WOMENS SALE</h5></a>
+                      </li>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Bottoms</a></li>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Dresses</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"><h5 >LAST OF THE BEST</h5></a>
+                      </li>
+                      <li><a href="#"><h5 > Upto 60 percent Off</h5></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="secondBox">
+              <h4 id="user"></h4>
+              <p id="logout"></p>
+              <p class="searchBox">
+                <input type="text" placeholder="Search" />
+                <a href="#" style="color: black"
+                  ><i class="fa fa-search" aria-hidden="true"></i
+                ></a>
+              </p>
+            </div>
+          </div> 
+          
+        <div class="heading">
+          <p>
+            10% off on your first purchase! Use Code: 
+            <strong>AEFIRST10</strong>
+            </p>
+        </div>
+      </div>  
+    <!-- Nav Bar ends -->
+    <div id="upper">
+        <div>Home / Mens Wear</div>
+          <div>
+            <select name="select" id="sel">
+            <option value="">Sort By<br> New Arrivals </div></option>
+            <option value="low">Price:Lowest First</option>
+            <option value="high">Price:Highest First</option>
+            </select>
+      </div>
+    </div>
+    <div id="table2">
+       <div>
+        <div class="sidenav">
+            <div class="head">
+             FILTER <span class="filteritems__count">1163 items</span>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Gender
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Category
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Belts</a>
+              <a href="#">Bottoms</a>
+              <a href="#">Boxers</a>
+              <a href="#">Graphic Tees</a>
+              <a href="#">Hoodies</a>
+              <a href="#">Jackets</a>
+              <a href="#">Jeans</a>
+              <a href="#">Joggers</a>
+              <a href="#">Mask</a>
+              <a href="#">Polo Shirt</a>
+              <a href="#">Shirts</a>
+              <a href="#">Shoes</a>
+              <a href="#">Socks</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+              <a href="#">Tops</a>
+              <a href="#">UnderWear</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Product Type
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1 Polo Shirt</a>
+              <a href="#">3 Pack Short</a>
+              <a href="#">3 Pack Socks</a>
+              <a href="#">5 Pack Masks</a>
+              <a href="#">5 Pack socks</a>
+              <a href="#">Athletic fit jeans</a>
+              <a href="#">Belts</a>
+              <a href="#">Bomber Jackets</a>
+              <a href="#">Bootcut Jeans</a>
+              <a href="#">Boxer Breifs</a>
+              <a href="#">Boxer Shots</a>
+              <a href="#">Boxers</a>
+              <a href="#">Briefs</a>
+              <a href="#">Button Down Shirt</a>
+              <a href="#">Button Up Shirts</a>
+              <a href="#">Chinos</a>
+              <a href="#">Crew Beck T-Shirts</a>
+              <a href="#">Denim Jacket</a>
+              <a href="#">Denim Jpggers</a>
+              <a href="#">Flannel Shirts</a>
+              <a href="#">Denim Shorts</a>
+              <a href="#">Fleece Joggers</a>
+              <a href="#">Flip Flops</a>
+              <a href="#">Henley T-shirts</a>
+              <a href="#">Hooded Shirts</a>
+              <a href="#">Khacki Shorts</a>
+              <a href="#">Crew Beck T-Shirts</a>
+              <a href="#">Graphic Tees</a>
+              <a href="#">Hoodies</a>
+              <a href="#">Jackets</a>
+              <a href="#">Jeans</a>
+              <a href="#">Joggers</a>
+              <a href="#">Mask</a>
+              <a href="#">Polo Shirt</a>
+              <a href="#">Shirts</a>
+              <a href="#">Shoes</a>
+              <a href="#">Socks</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Fit
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Adjustable Fit</a>
+              <a href="#">Athletic</a>
+              <a href="#">Classic Fit</a>
+              <a href="#">Loose Fit</a>
+              <a href="#">Original Bootcut</a>
+              <a href="#">Original Straight</a>
+              <a href="#">Relaxed Fit</a>
+              <a href="#">Skinny</a>
+              <a href="#">Skinny Fit</a>
+              <a href="#">Slim</a>
+              <a href="#">Slim Fit</a>
+              <a href="#">Slim Straight</a>
+              <a href="#">Standard Fit</a>
+              <a href="#">Super Skinny</a>
+              <a href="#">Ultra Skinny</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Sizes
+            </button>
+            <div class="dropdown-container">
+              <a href="#">XS</a>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XXL</a>
+              <a href="#">XL</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">26</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Color
+            </button>
+            <div class="dropdown-container">
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/others/img1x1.png"
+                    class="clrImg"
+                /></span>
+                Beige</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/black.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                black</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/blue.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Blue</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/brown.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Brown</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/burgundy.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Burgundy</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/cream.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Cream</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/green.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Green</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/grey.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Grey</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/khaki.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Khaki</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/maroon.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Maroon</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/others/img1x1.png"
+                    class="clrImg"
+                /></span>
+                Multi</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/multi-colored.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Multi-Colored</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/navy.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Navy</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/olive.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Olive</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/orange.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Orange</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/peach.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Peach</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/pink.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Pink</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/purple.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Purple</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/red.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Red</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/white.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                white</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/yellow.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Yellow</a
+              >
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Price
+            </button>
+            <div class="dropdown-container">
+              <a href="#">399 AND BELOW</a>
+              <a href="#">400 TO 599</a>
+              <a href="#">600 TO 999</a>
+              <a href="#">1000 TO 1499</a>
+              <a href="#">1500 TO 2999</a>
+              <a href="#">3000 TO 4499</a>
+              <a href="#">4500 To 6999</a>
+              <a href="#">7500 TO 8999</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Discount
+            </button>
+            <div class="dropdown-container">
+              <a href="#">25% and Above</a>
+              <a href="#">30% and Above</a>
+              <a href="#">40% and Above</a>
+              <a href="#">50% and Above</a>
+              <a href="#">60% and Above</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Wash
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Black</a>
+              <a href="#">Color wash</a>
+              <a href="#">Dark wash</a>
+              <a href="#">Light wash</a>
+              <a href="#">Medium wash</a>
+              <a href="#">white</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Pattern
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Checks</a>
+              <a href="#">1|Checks|Elastic</a>
+              <a href="#">1|Checks|Elastic|Flat front</a>
+              <a href="#">1|Colorblock</a>
+              <a href="#">1|Elastic|Flat front</a>
+              <a href="#">1|Elastic|Flat front|Print-Tropical</a>
+              <a href="#">Checks</a>
+              <a href="#">Checks|Elastic</a>
+              <a href="#">Checks|Elastic|Flat front</a>
+              <a href="#">Colorblock</a>
+              <a href="#">Elastic|Flat front|Print-Tropical</a>
+              <a href="#">Floral</a>
+              <a href="#">Printed</a>
+              <a href="#">solid</a>
+              <a href="#">Stripes</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Sleeves
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Long sleeve</a>
+              <a href="#">1|Short sleeve</a>
+              <a href="#">Half sleeves</a>
+              <a href="#">Long Sleeve</a>
+              <a href="#">Short Sleeve</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Neck
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Band</a>
+              <a href="#">Collor</a>
+              <a href="#">Crew Neck</a>
+              <a href="#">Mock Neck</a>
+              <a href="#">Round Neck</a>
+              <a href="#">V-Neck</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Stretch
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Ne(x)T Level</a>
+              <a href="#">1|Ne(x)T Level</a>
+              <a href="#">AirFlex+</a>
+              <a href="#">Flex</a>
+              <a href="#">Ne(x)T Level</a>
+              <a href="#">No stretch</a>
+              <a href="#">Slight stretch</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Destruction
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Clean</a>
+              <a href="#">Ripped</a>
+            </div>
+            <hr />
+          </div>
+       </div>
+       <div id="dis" class="data-list-wrapper">
+        <!-- All data will be appended here -->
+    </div>
+    </div>
+<div id="pagination-wrapper"></div>
+         <!-- Footer -->
+         <br />
+
+         <hr />
+         <br />
+         <div class="footer">
+           <div>
+             <span>Want 25% off your purchase?</span>
+             <a id="link" href="#">Refer A friend!</a>
+           </div>
+           <div>
+             <span>A gift that always fits.</span>
+             <a id="link" href="#">Shop E-Gift Card</a>
+           </div>
+         </div>
+         <div class="lowerbox">
+           <div>
+             <ul>
+               <li>
+                 <i class="fa fa-credit-card"></i>PAYMENT OPTIONS<br />Credit,Debit,Paytm
+                 Wallet & more.
+               </li>
+               <br />
+               <li>
+                 <a href="#"><i class="fa fa-map-marker"></i>STORE LOCATOR</a>
+               </li>
+               <li>
+                 <a href="#"><i class="fa fa-envelope"></i>EMAIL SIGN UP</a>
+               </li>
+             </ul>
+           </div>
+           <div>
+             <ul>
+               <li>
+                 <a href="#"><i class="fa fa-truck"></i> TRACK ORDER</a>
+               </li>
+               <br />
+               <li><a href="#">ABOUT AEO</a></li>
+               <li><a href="#">FREQUENTLY ASKED QUESTIONS</a></li>
+               <li><a href="#">RETURNS POLICY</a></li>
+               <li><a href="#">CANCELLATION POLICY</a></li>
+               <li><a href="#">SHIPPING POLICY</a></li>
+               <li><a href="#">TERMS AND CONDITIONS OF USE</a></li>
+               <li><a href="#">OFFER TERMS AND CONDITIONS</a></li>
+               <li><a href="#">PRIVACY POLICY</a></li>
+               <li><a href="#">SITE MAP</a></li>
+             </ul>
+           </div>
+           <div>
+             <ul>
+               <li><i class="fa fa-question-circle"></i>HAVE A QUESTION ?</li>
+               <br />
+               <li><a href="#">HELP</a></li>
+               <li><a href="#">HELP CENTER</a></li>
+               <br />
+               <br />
+               <li>FOLLOW US</li>
+               <li>
+                 <a href=""><i class="fa fa-facebook-f"></i></a
+                 ><a href=""><i class="fa fa-instagram"></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <hr />
+         <br />
+       <p id="footer-down">© 2023 AEO Management Co. All Rights Reserved.</p>
+    
+       <!-- Popup for signup page -->
+       <div class="popup">
+         <div class="contentBox">
+           <div class="close"></div>
+         </div>
+       </div>
+       <script src="./script/sign.js"></script>
+       <script src="./script/men.js"></script>
 </body>
 </html>

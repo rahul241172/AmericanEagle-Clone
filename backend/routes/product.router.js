@@ -6,6 +6,7 @@ const {authorization}=require("../middleware/authorization")
 
 
 products.get("/",async(req,res)=>{
+    // const{q="",page=1,limit=10}=req.query
             try{
                 let data=await ProductModel.find()
                 res.send(data)
@@ -13,6 +14,15 @@ products.get("/",async(req,res)=>{
                 console.log(err)
                }
             })
+products.get("/mens",async(req,res)=>{
+    // const{q="",page,limit}=req.query
+                try{
+                    let data=await ProductModel.find({category:"mens"})
+                    res.send(data)
+                   }catch(err){
+                    console.log(err)
+                   }
+                })
 
 products.post("/add",async(req,res)=>{
 const payload=req.body

@@ -8,13 +8,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    min-height: 100vh;
-  }
-  
-  
-  /* Navigation CSS */
-  
+  /* navbar */
+ 
   .nav-top {
     height: 20px;
     width: 95%;
@@ -547,153 +542,269 @@
     height: 2px;
     background-color: black;
   }
-  /* Modal Pop Up or Sign in and sign up */
-
-  /* #icons{
-    width: 100%;
-    height: 100%;
+  /* navbar ends */
+  .container {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-gap: 40px;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+  }
+  .container > div {
+    height: 400px;
+    text-align: center;
+  }
+  /* img {
+    width: 290px;
+    height: 320px;
   } */
- 
-  
-  
-
-
-
-  /* container css */
-  .first_img {
-    width: 100%;
-    height: 800px;
+  .text {
+    font-size: 10px;
+  }
+  .btn {
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    width: 10%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 45%;
+  }
+  .cont {
     /* border: 1px solid red; */
-    background: url(https://imagescdn.aeo.in/img/app/brands/ae/AE_D_P3_15022023.jpg?w=1260&auto=format);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
+    height: auto;
+    display: inline-block;
+    display: grid;
   }
-  .first_img > .btn1 {
-    margin-top: 48%;
-    margin-left: 62%;
-    display: flex;
-    flex-direction: column;
+  .dull {
+    color: gray;
   }
-  .first_img > .btn1 > button {
+  .txt {
+    margin: auto;
+  }
+
+  
+  /* Fixed sidenav, full height */
+  .sidenav {
+    height: 100%;
+    width: 300px;
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+    font-family: "Avenir Next Regular";
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a,
+  .dropdown-btn {
+    padding: 14px 14px 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: "Avenir Next Demi";
+    font-weight: bold;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover,
+  .dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: black;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    color: black;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: white;
+    padding-left: 8px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+  }
+  
+  
+  /* Some media queries for responsiveness */
+  
+  .clrImg {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+  }
+  .dropdown-btn a {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .head {
+  margin-left: 20px;
+  }
+  .head .filteritems__count {
+    display: block;
+    color: #888;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 0 6 px 0 0;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 12 px;
+  }
+  .dropdown-btn:hover {
     background-color: white;
     color: black;
-    font-size: 12px;
+  }
+  hr {
+    margin-left: 20px;
+  }
+  span {
+    padding-right: 20px;
+  }
+  
+  img:hover {
+    border: 1px solid white;
+    /* border-radius: 50%; */
+  }
+  
+  #btn1 {
+    margin-right: 5px;
+    margin-top: 80px;
+    margin-left: -50px;
+    /* transform: translate(-100%, 150%);
+    -ms-transform: translate(-50%, -50%); */
+    background-color: white;
+    color: rgb(58, 49, 49);
+    font-size: 30px;
+    padding: 8px 12px;
+    font-weight: bolder;
     border: none;
-    height: 40px;
-    width: 180px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 28px 28px 28px 28px;
-    margin: 1%;
     cursor: pointer;
+    border-radius: 1000%;
+    text-align: center;
   }
-  .sec_img {
-    width: 100%;
-    height: 1100px;
-    /* border: 1px solid red; */
-    background: url(https://imagescdn.aeo.in/img/app/brands/ae/30-01-2023/desktop/AE_D_P1_30012023.jpg?w=1263&auto=format);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
+  
+  #btn1:hover {
+    cursor: default;
+    transform: rotate(180deg);
+    transition: all 1s ease-in-out 0s;
   }
-  .sec_img > .btn2 {
-    margin-top: 25%;
-    margin-left: 40%;
-    display: flex;
-    flex-direction: column;
-  }
-  .sec_img > .btn2 > button {
-    background-color: #feb25a;
-    color: white;
-    font-size: 15px;
+  
+  .btn2 {
+    position: absolute;
+    margin-top: auto;
+    margin-left: auto;
+    /* top: 58%;
+    left: 67.5%; */
+    /* transform: translate(-100%, 150%);
+    -ms-transform: translate(-50%, -50%); */
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 12px 24px;
     border: none;
-    height: 40px;
-    width: 180px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 28px 28px 28px 28px;
-    margin: 1%;
     cursor: pointer;
+    border-radius: 1000%;
+    text-align: center;
   }
-  .third_img {
+  
+  .btn2:hover {
+    cursor: default;
+    transform: rotate(180deg);
+    transition: all 1s ease-in-out 0s;
+  }
+  
+  #sel {
     width: 100%;
-    height: 740px;
-    background: url(https://imagescdn.aeo.in/img/app/brands/ae/30-01-2023/desktop/AE_D_P4_30012023.jpg?w=1263&auto=format);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
+    color: gray;
   }
-  .third_img > .btn3 {
-    margin-top: 45%;
-    margin-left: 12%;
+  
+  
+  #upper {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+  }
+#upper>div:nth-child(1){
+  margin-left: 50%;
+}
+  #table2 {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    /* justify-content: space-between; */
+    margin-top: 30px;
+    margin: auto;
   }
-  .third_img > .btn3 > button {
-    background-color: #feb25a;
-    color: white;
-    font-size: 15px;
-    border: none;
-    height: 50px;
-    width: 240px;
-    border-radius: 28px 28px 28px 28px;
-    margin: 1%;
-    cursor: pointer;
-  }
-  .forth_img {
-    width: 100%;
-    height: 855px;
-    background: url(https://imagescdn.aeo.in/img/app/brands/ae/30-01-2023/desktop/AE_D_P5_30012023.jpg?w=1263&auto=format);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .forth_img > .btn4 {
-    margin-top: 48%;
-    margin-left: 7%;
-    display: flex;
-    flex-direction: column;
-  }
-  .forth_img > .btn4 > button {
-    background-color: #feb25a;
-    color: white;
-    font-size: 15px;
-    border: none;
-    height: 50px;
-    width: 190px;
-    border-radius: 28px 28px 28px 28px;
-    margin: 0.5%;
-    cursor: pointer;
-  }
-  .six_img {
-    width: 100%;
-    height: 550px;
-    background: url(https://imagescdn.aeo.in/img/app/brands/ae/30-01-2023/desktop/AE_D_P6_30012023.jpg?w=1263&auto=format);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: row;
-  }
-  .six_img > .btn22 {
-    margin-top: 29%;
-    margin-left: 33%;
-    display: flex;
-    flex-direction: row;
+  .data-list-wrapper {
+    margin-left: 90px;
+    margin-right: 20px;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
   }
-  .six_img > .btn22 > button {
+  .card-wrapper{
+   margin-top: 10px;
+  }
+  .card-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    /* width: 70%; */
+    margin-left: 40px;
+    justify-content: center;
+    font-family: "Avenir Next Regular";
+  }
+  /* .imagediv{
+    height: 400px;
+    border: 1px solid black;
+  } */
+  .imagediv img{
+    width: 100%;
+  }
+  
+  .list-buttons{
+    text-align: center;
+  }
+  .add-data{
     background-color: #feb25a;
-    color: white;
-    font-size: 15px;
-    border: none;
-    height: 50px;
-    width: 240px;
+    color: #fff;
+    border:none;
+    padding: 10px 20px 10px 20px;
     border-radius: 28px 28px 28px 28px;
-    margin: 2%;
-    margin-bottom: 70%;
+  }
+  .add-data:hover{
+    cursor: pointer;
+  }
+  #pagination-wrapper{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #888;
+    text-align: center;
+    padding: 10px;
+  }
+  .pagination-button{
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+  }
+  .pagination-button:hover{
+    color: blue;
     cursor: pointer;
   }
