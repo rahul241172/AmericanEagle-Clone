@@ -23,7 +23,7 @@ Fetching()
 
 async function Fetching(queryParamString = null) {
     try {
-        let res = await fetch(`${baseUrl}/products/mens${queryParamString ? queryParamString : ""}`);
+        let res = await fetch(`${baseUrl}/products/womens${queryParamString ? queryParamString : ""}`);
         var data = await res.json();
         arr = data
         let count = data.length
@@ -153,11 +153,11 @@ getData(new_arr)
 
 // mens jeans filter
 
-let mensjeans=document.getElementById("mens-jeans")
-let menstshirt=document.getElementById("mens-tshirt")
+let mensjeans=document.getElementById("womens-jeans")
+let menstshirt=document.getElementById("womens-tshirt")
 mensjeans.addEventListener("click",()=>{
     let newarr=arr.filter((item)=>{
-        return item.type=="jeans"
+        return item.type=="womens-jeans"
     })
     getData(newarr)
     sel.addEventListener("change",()=>{
@@ -182,7 +182,7 @@ mensjeans.addEventListener("click",()=>{
 })
 menstshirt.addEventListener("click",()=>{
     let newarr=arr.filter((item)=>{
-        return item.type=="tshirt"
+        return item.type=="womens-tshirts"
     })
     getData(newarr)
     sel.addEventListener("change",()=>{

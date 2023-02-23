@@ -23,6 +23,15 @@ products.get("/mens",async(req,res)=>{
                     console.log(err)
                    }
                 })
+                products.get("/womens",async(req,res)=>{
+                    // const{q="",page,limit}=req.query
+                                try{
+                                    let data=await ProductModel.find({category:"womens"})
+                                    res.send(data)
+                                   }catch(err){
+                                    console.log(err)
+                                   }
+                                })
 
 products.post("/add",async(req,res)=>{
 const payload=req.body
