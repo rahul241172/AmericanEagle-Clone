@@ -1,3 +1,4 @@
+var baseUrl = "http://localhost:8080"
 var popup = document.querySelector(".popup");
 var close = document.querySelector(".close");
 
@@ -29,8 +30,9 @@ modalCl1.addEventListener("click", function () {
     modalBg1.classList.remove("bg-active1");
 });
 
+
+// Register as new user Signup
 document.querySelector(".next").addEventListener("click", signUp);
-var userArr = JSON.parse(localStorage.getItem("userData")) || [];
 
 function signUp() {
     var name = document.getElementById("name").value;
@@ -38,37 +40,56 @@ function signUp() {
     var pass = document.getElementById("pass1").value;
 
     var userProfile = {
-        fname: name,
-        emailAddress: email,
+        name: name,
+        email: email,
         password: pass,
     };
 
-    userArr.push(userProfile);
-    localStorage.setItem("userData", JSON.stringify(userArr));
+    fetch(`${baseUrl}/users/register`,{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify(userProfile)
+    }).then(res=>res.json())
+    .then((res)=>{
+        if(res.msg=="Already registered"){
 
-    window.location.href = "index.html";
+        }
+        else{
+
+        }
+
+    })
 }
 
+
+// login as user
 document.querySelector(".signInn").addEventListener("click", signIn);
 
-var regdUsers = JSON.parse(localStorage.getItem("userData"));
+var user;
 
-function signIn() {
+async function signIn() {
     var email = document.querySelector("#email").value;
     var pass = document.querySelector("#pass").value;
 
-    for (var i = 0; i < regdUsers.length; i++) {
-        if (regdUsers[i].emailAddress == email && regdUsers[i].password == pass) {
-            alert("Login Successfully!");
-            window.location.href = "index.html";
-            return true;
-        }
-    }
-    for (var j = 0; j < regdUsers.length; j++) {
-        if (regdUsers[j].emailAddress != email && regdUsers[j].password != pass) {
-            alert("Invalid User Credentials!");
-            window.location.href = "index.html";
-            return true;
-        }
-    }
+   
 }
+
+
+
+
+// for (var i = 0; i < regdUsers.length; i++) {
+//     if (regdUsers[i].emailAddress == email && regdUsers[i].password == pass) {
+//         alert("Login Successfully!");
+//         window.location.href = "index.html";
+//         return true;
+//     }
+// }
+// for (var j = 0; j < regdUsers.length; j++) {
+//     if (regdUsers[j].emailAddress != email && regdUsers[j].password != pass) {
+//         alert("Invalid User Credentials!");
+//         window.location.href = "index.html";
+//         return true;
+//     }
+// }

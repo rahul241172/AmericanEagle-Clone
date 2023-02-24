@@ -27,13 +27,13 @@ const {email,password,name}=req.body
 try{
     const data=await UserModel.find({email})
         if(data.length>0){
-    res.send("Already registered")
+    res.send({msg:"Already registered"})
         }
     else{
     bcrypt.hash(password, 5,async(err, hash)=>{
         const user=new UserModel({email,password:hash,name})
     await user.save()
-    res.send("registered")
+    res.send({msg:"registered"})
     });
     }
 }catch(err){

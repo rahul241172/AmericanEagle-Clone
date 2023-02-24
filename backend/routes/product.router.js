@@ -47,7 +47,7 @@ products.get("/mens",async(req,res)=>{
                                    }
                                 })
 
-products.post("/add",async(req,res)=>{
+products.post("/add",authorization,async(req,res)=>{
 const payload=req.body
 try{
     let data=new ProductModel(payload)
