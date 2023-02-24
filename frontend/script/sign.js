@@ -54,10 +54,10 @@ function signUp() {
     }).then(res=>res.json())
     .then((res)=>{
         if(res.msg=="Already registered"){
-
+            alert("Already registered")
         }
         else{
-
+            alert("Registered")
         }
 
     })
@@ -66,30 +66,49 @@ function signUp() {
 
 // login as user
 document.querySelector(".signInn").addEventListener("click", signIn);
+let username=document.getElementById("user")
+let Logout=document.getElementById("logout")
+var userdata;
 
-var user;
-
-async function signIn() {
+function signIn() {
     var email = document.querySelector("#email").value;
     var pass = document.querySelector("#pass").value;
+let obj={
+    email,password:pass
+}
+fetch(`${baseUrl}/users/login`,{
+    method:"POST",
+    headers:{
+        "Content-type":"application/json"
+    },
+    body:JSON.stringify(obj)
+}).then(res=>res.json())
+.then((res)=>{
+    if(res.msg=="wrong credentials"){
+        alert("wrong credentials")
+    }
+    else{
+        alert("Login Success")
+        userdata=res.data
+       username.innerHTML=userdata[0].name
+        Logout.innerHTML="Logout"
+        localStorage.setItem("token",res.token)
+        localStorage.setItem("user",JSON.stringify(userdata))
+       
+    }
 
-   
+})
 }
 
 
+// Logout
 
 
-// for (var i = 0; i < regdUsers.length; i++) {
-//     if (regdUsers[i].emailAddress == email && regdUsers[i].password == pass) {
-//         alert("Login Successfully!");
-//         window.location.href = "index.html";
-//         return true;
-//     }
-// }
-// for (var j = 0; j < regdUsers.length; j++) {
-//     if (regdUsers[j].emailAddress != email && regdUsers[j].password != pass) {
-//         alert("Invalid User Credentials!");
-//         window.location.href = "index.html";
-//         return true;
-//     }
-// }
+Logout.addEventListener("click",()=>{
+    localStorage.clear()
+    username.innerHTML=""
+    Logout.innerHTML=""
+    alert("Logout sucessfully")
+    window.location.href="#"
+})
+

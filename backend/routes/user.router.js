@@ -52,13 +52,13 @@ users.post("/login",async(req,res)=>{
                     var token= jwt.sign({userID:data[0]._id},"masai", {
                         expiresIn: '1h',
                      });
-                     res.send({ msg: "Login Successful", token: token })
+                     res.send({ msg: "Login Successful", token: token ,data})
                     
                 }
              });
         }
         else{
-            res.send("wrong credentials")  
+            res.send({msg:"wrong credentials"})  
         }
     }catch(err){
         console.log(err)

@@ -12,12 +12,12 @@ const authorization=(req,res,next)=>{
                 next()
             }
             else{
-                res.send("Please login")
+                res.send({msg:"Please login"})
             }
         })
     }
     else{
-        res.send("Please login")
+        res.send({msg:"Please login"})
     }
 }
    
