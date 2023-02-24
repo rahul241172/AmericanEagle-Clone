@@ -1,7 +1,8 @@
 const express=require("express")
 const {connection}=require("./config/db")
 const {users}=require("./routes/user.router")
-const {products}=require("./routes/product.router")
+const {products}=require("./routes/product.router") 
+const {cart}=require("./routes/cart.router") 
 var cors = require('cors')
 
 
@@ -21,6 +22,7 @@ app.get("/",(req,res)=>{
 
 app.use("/users",users)
 app.use("/products",products)
+app.use("/cart",cart)
 
 
 

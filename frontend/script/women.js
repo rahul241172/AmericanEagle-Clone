@@ -43,7 +43,7 @@ function getData(data) {
       <div class="card-list">
           ${data
             .map((item) => {
-                let id = item.id
+                let id = item._id
                 let image = item.image;
                 let name = item.name;
                 let price = item.price;
@@ -243,3 +243,17 @@ search()
     }
     
 })
+
+
+
+// To get userdata on navbar
+let user_data=JSON.parse(localStorage.getItem("user"))||[]
+let token=localStorage.getItem("token")||null
+let user_name=document.getElementById("user")
+let logout=document.getElementById("logout")
+
+if(user_data){
+user_name.innerHTML=user_data[0].name
+logout.innerHTML="Logout"
+}
+

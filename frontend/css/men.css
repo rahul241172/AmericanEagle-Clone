@@ -808,3 +808,12 @@
     color: blue;
     cursor: pointer;
   }
+
+  #user:hover{
+    color: blue;
+    cursor: pointer;
+  }
+  #logout:hover{
+    color: blue;
+    cursor: pointer;
+  }

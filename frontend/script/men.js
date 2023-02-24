@@ -43,7 +43,7 @@ function getData(data) {
       <div class="card-list">
           ${data
             .map((item) => {
-                let id = item.id
+                let id = item._id
                 let image = item.image;
                 let name = item.name;
                 let price = item.price;
@@ -54,6 +54,7 @@ function getData(data) {
             .join("")}
       </div>
   `;
+  addtocart()
 }
 
 
@@ -61,15 +62,15 @@ function getAsCard(id, image, name, price, type, category) {
     return `
         <div class="card-wrapper">
         <div class="imagediv">
-        <img src="${image}" alt="image">
+        <img id="product-image" src="${image}" alt="image">
         </div>
         <br>
         <div class="title">
-        <span>${name}</span>
-        <p class="price">${price}</p>
+        <span id="product-name">${name}</span>
+        <p id="product-price" class="price">${price}</p>
            </div>
           <div class="list-buttons">
-          <button class="add-data" data-id="${id}" >Add to Cart</button>
+          <button class="add-data" data-id="${id}">Add to Cart</button>
           </div>
         </div>
     `;
@@ -246,3 +247,59 @@ search()
     }
     
 })
+
+
+// To get userdata on navbar
+
+let user_data=JSON.parse(localStorage.getItem("user"))||[]
+let token=localStorage.getItem("token")
+let user_name=document.getElementById("user")
+let logout=document.getElementById("logout")
+
+if(user_data.length>0){
+user_name.innerHTML=user_data[0].name
+logout.innerHTML="Logout"
+}
+
+
+// Add to cart
+function addtocart(){
+let cartbtn=document.querySelectorAll(`.add-data`)
+for(let cart of cartbtn){
+    cart.addEventListener("click",(e)=>{
+let dataid=e.target.dataset.id
+let obj={}
+arr.forEach(element => {
+    if(dataid==element._id){
+        obj.name=element.name
+        obj.image=element.image
+        obj.price=element.price
+        obj.dataid=dataid
+        obj.quantity=1
+    }
+});
+console.log(obj)
+    if (token){
+        fetch(`${baseUrl}/cart/add`,{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json",
+                "Authorization":token
+            },
+            body:JSON.stringify(obj)
+        }).then(res=>res.json())
+        .then((res)=>{
+                if(res.msg=="Product Added sucessfully"){
+                alert("Added to cart")
+                }
+                else{
+                    alert("Already in cart")
+                }
+    })
+}
+else{
+    alert("please login first")
+}
+})
+}
+}
