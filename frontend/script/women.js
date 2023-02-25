@@ -54,6 +54,7 @@ function getData(data) {
             .join("")}
       </div>
   `;
+  addtocart()
 }
 
 
@@ -257,3 +258,45 @@ user_name.innerHTML=user_data[0].name
 logout.innerHTML="Logout"
 }
 
+// Add to cart
+function addtocart(){
+    let cartbtn=document.querySelectorAll(`.add-data`)
+    for(let cart of cartbtn){
+        cart.addEventListener("click",(e)=>{
+    let dataid=e.target.dataset.id
+    let obj={}
+    arr.forEach(element => {
+        if(dataid==element._id){
+            obj.name=element.name
+            obj.image=element.image
+            obj.price=element.price
+            obj.dataid=dataid
+            obj.quantity=1
+        }
+    });
+    console.log(obj)
+        if (token){
+            fetch(`${baseUrl}/cart/add`,{
+                method:"POST",
+                headers:{
+                    "Content-type":"application/json",
+                    "Authorization":token
+                },
+                body:JSON.stringify(obj)
+            }).then(res=>res.json())
+            .then((res)=>{
+                    if(res.msg=="Product Added sucessfully"){
+                    swal("Added to cart","", "success")
+                    }
+                    else{
+                    swal("Already in Cart!", "Add Something else!", "warning")
+                    }
+        })
+    }
+    else{
+    swal("Please login first", "", "warning")
+    }
+    })
+    }
+    }
+    

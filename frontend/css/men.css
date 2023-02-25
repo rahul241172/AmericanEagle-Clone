@@ -817,3 +817,7 @@
     color: blue;
     cursor: pointer;
   }
+
+  .price::before{
+    content: "\20B9";
+  }

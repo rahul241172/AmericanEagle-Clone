@@ -67,6 +67,30 @@ users.post("/login",async(req,res)=>{
     }
     })
 
+
+users.delete("/delete/:id",authorization,async(req,res)=>{
+        let id=req.params.id
+        try{
+                let data=await UserModel.findByIdAndDelete({_id:id})
+                res.send({msg:"deleted"})
+        }catch(err){
+            console.log(err)
+        }
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports={
     users
 }
