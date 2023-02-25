@@ -13,7 +13,16 @@ For the frontend, I have used HTML and CSS JavaScript and for the backend I've  
 <img src="https://i.ibb.co/wdtQFf0/womens.png">
 <p>Cart Page</p>
 <img src="https://i.ibb.co/zhhGrRf/cartpage.png">
-
+# Key Features (Users side)
+1.Login/Signup.
+2.Add to Cart (only when Login).
+3.User's own cart when he is login.
+4.Search,Sort,filter products.
+5.Pagination on Product pages.
+# Key Features (Admin side)
+1.Able to view all users and delete users as well.
+2.Admin is able to Add,Delete,Update the products.
+5.Pagination on Admin portal as well.
 
 
 <p>To see my Project click this link 👉:
