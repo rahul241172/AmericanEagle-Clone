@@ -61,18 +61,10 @@ try{
 
 products.patch("/update/:id",authorization,async(req,res)=>{
     let payload=req.body
-    let id=req.params.id
-    let note=await ProductModel.findOne({"_id":id})
-    let user=note.userID
-    let user_making_req=req.body.userID
+    let id=req.params.id 
     try{
-        if(user!=user_making_req){
-            res.send("you are not authorized")  
-        }
-        else{
             let data=await ProductModel.findByIdAndUpdate({"_id":id},payload)
-            res.send("updated")
-        }
+            res.send({msg:"updated"})
     }catch(err){
         console.log(err)
     }

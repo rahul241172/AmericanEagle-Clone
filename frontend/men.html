@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Mens css -->
     <link rel="stylesheet" href="./css/men.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -15,325 +16,325 @@
 <body>
     <!-- Nav bar -->
     <div class="nav-top">
-        <p>
-          <a href="#"><u class="uline">E-Gift Card</u></a>
-        </p>
-        <p>
-          <a href="#"><u class="uline">Store Locator</u></a>
-        </p>
-        <p>
-          <a href="trackorder.html" ><u class="uline">Track Order</u></a>
-        </p>
-          <div class="dropdown bg">
-            <a class="dropbtn selectColor" href="#"><u class="uline">My Aeo</u></a>
-  
-            <div class="dropdown-content">
-              <br>
-              <button class="signinBtn modal-btn">Sign in</button>
-              <!--Modal -->
-              <div class="modal-bg">
-                <div class="modal">
-                  <br>
-                  <div class="black"></div>
-                  <h1>Welcome To</h1>
-                  <h1 style="font-weight: 600;">Fashion Mink</h1>
-                  <br><br>
-                  <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
-                  <br><br>
-                  <input id="email" type="email" name="email" placeholder="Enter email / mobile number">
-                  <br><br>
-                  <input id="pass" type="password" placeholder="Enter password">
-                  <br><br>
-                  <button class="signInn">Sign In</button>
-                  <br><br>
-                  <h2 style="text-align: center;">Or</h2>
-                  <a href="admin.html" id="admin"><h2>Login as Admin</h2></a>
-                  <span class="modal-close">X</span>
-                </div>
+      <p>
+        <a href="#"><u class="uline">E-Gift Card</u></a>
+      </p>
+      <p>
+        <a href="#"><u class="uline">Store Locator</u></a>
+      </p>
+      <p>
+        <a href="#" ><u class="uline">Track Order</u></a>
+      </p>
+        <div class="dropdown bg">
+          <a class="dropbtn selectColor" href="#"><u class="uline">My Aeo</u></a>
+
+          <div class="dropdown-content">
+            <br>
+            <button class="signinBtn modal-btn">Sign in</button>
+            <!--Modal -->
+            <div class="modal-bg">
+              <div class="modal">
+                <br>
+                <div class="black"></div>
+                <h1>Welcome To</h1>
+                <h1 style="font-weight: 600;">Fashion Mink</h1>
+                <br><br>
+                <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
+                <br><br>
+                <input id="email" type="email" name="email" placeholder="Enter email / mobile number">
+                <br><br>
+                <input id="pass" type="password" placeholder="Enter password">
+                <br><br>
+                <button class="signInn">Sign In</button>
+                <br><br>
+                <h2 style="text-align: center;">Or</h2>
+                <a id="admin"><h2>Login as Admin</h2></a>
+                <span class="modal-close">X</span>
               </div>
-              <a href="#"><u class="uline">AEO Credits</u></a>
-              <a href="#"><u class="uline">Online Orders History</u></a>
-              <a href="#"><u class="uline">Giftcard Order History</u></a>
-              <a href="#"><u class="uline">Account Settings</u></a>
-              <a href="#"><u class="uline">Shipping Addresses</u></a>
-              <a href="#"><u class="uline">Change Password</u></a>
-              <hr />
-              <br />
-              <p>&nbsp;&nbsp;Don't have an account?</p>
-              <p>&nbsp;&nbsp;No problem..</p>
-              <a href="#" class="modal-btn1"><u>Create account</u></a>
-              <!--Modal -->
-              <div class="modal-bg1">
-                <div class="modal1">
-                  <br>
-                  <div class="black"></div>
-                  <h1>WELCOME TO</h1>
-                  <h1 style="font-weight: 600;">AMERICAN EAGLE</h1>
-                  <br><br>
-                  <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
-                  <br><br>
-                  <input id="name" type="text" name="name" placeholder="Enter name">
-                  <br><br>
-                  <input id="email1" type="email" name="email" placeholder="Enter email / mobile number">                 
-                  <br><br>
-                  <input id="pass1" type="password" placeholder="Enter password">
-                  <br><br>
-                  <button class="next">NEXT</button>
-                  <br><br>
-                  <h5>LOGIN WITH SOCIAL MEDIA</h5>
-                  <br><br>
-                  <button class="google"><i class="fa fa-google" aria-hidden="true"></i>&nbsp;Google</button>
-                  <span class="modal-close1">X</span>
-                </div>
+            </div>
+            <a href="#"><u class="uline">AEO Credits</u></a>
+            <a href="#"><u class="uline">Online Orders History</u></a>
+            <a href="#"><u class="uline">Giftcard Order History</u></a>
+            <a href="#"><u class="uline">Account Settings</u></a>
+            <a href="#"><u class="uline">Shipping Addresses</u></a>
+            <a href="#"><u class="uline">Change Password</u></a>
+            <hr />
+            <br />
+            <p>&nbsp;&nbsp;Don't have an account?</p>
+            <p>&nbsp;&nbsp;No problem..</p>
+            <a href="#" class="modal-btn1"><u>Create account</u></a>
+            <!--Modal -->
+            <div class="modal-bg1">
+              <div class="modal1">
+                <br>
+                <div class="black"></div>
+                <h1>WELCOME TO</h1>
+                <h1 style="font-weight: 600;">AMERICAN EAGLE</h1>
+                <br><br>
+                <p style="font-size: 13px;">Login / Register with us to get latest updates and<br> manage your orders</p>
+                <br><br>
+                <input id="name" type="text" name="name" placeholder="Enter name">
+                <br><br>
+                <input id="email1" type="email" name="email" placeholder="Enter email / mobile number">                 
+                <br><br>
+                <input id="pass1" type="password" placeholder="Enter password">
+                <br><br>
+                <button class="next">NEXT</button>
+                <br><br>
+                <h5>LOGIN WITH SOCIAL MEDIA</h5>
+                <br><br>
+                <button class="google"><i class="fa fa-google" aria-hidden="true"></i>&nbsp;Google</button>
+                <span class="modal-close1">X</span>
               </div>
             </div>
           </div>
-        <p>
-          <a href="#" title="Favorites"
-            ><i class="fa fa-heart"></i>&nbsp;<u class="uline">Favorites</u></a
-          >
-        </p>
-        <p>
-          <a href="checkout.html" title="Items">
-            <img
-              height="12px"
-              width="12px"
-              src="https://www.freepnglogos.com/uploads/shopping-bag-png/google-white-shopping-bag-icon-kalost-14.png"
-              alt=""
-            />
-            <u>0</u><u class="uline">items</u></a
-          >
-        </p>
-      </div>
-          <div class="navbar_sticky">
-          <div class="menubar">
-            <a href="index.html">
-                    <img id="main-logo" src="https://i.ibb.co/3mBvfKy/fashion-mink-high-resolution-logo-black-on-white-background.jpg" alt="">
-                   </a>
-            <ul>
-              <li class="active">
-                <a class="hover1" href="#">Men</a>
-                <div class="submenu-1">
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>TOPS</h5></a>
-                      </li>
-                      <li><a href="#">T-Shirts</a></li>
-                      <li><a href="#">Graphic Tees</a></li>
-                      <li><a href="#">Polo Shirts</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>BOTTOMS</h5></a>
-                      </li>
-                      <li><a href="#">Jeans</a></li>
-      
-                      <li><a href="#">Shorts</a></li>
-                      <li><a href="#">Joggers</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>UNDERWEAR</h5></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
-                      </li>
-                      <li><a href="#">Shoes</a></li>
-                      <li><a href="#">Socks</a></li>
-                      <li><a href="#">Belts</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>FEATURED</h5></a>
-                      </li>
-                      <li><a href="#">New Arrivals</a></li>
-                      <li><a href="#">Best Sellers</a></li>
-                      <li><a href="#">Airflex shop</a></li>
-                      <li><a href="#">Ripped Jeans</a></li>
-                      <li><a href="#">The Logo Shop</a></li>
-                      <li><a href="#">Stripe Edit</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-      
-              <li class="active">
-                <a class="hover1" href="women.html">Women</a>
-                <div class="submenu-1">
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>TOPS</h5></a>
-                      </li>
-                      <li><a href="#">T-Shirts</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Sweaters & Cardigans</a></li>
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>BOTTOMS</h5></a>
-                      </li>
-                      <li><a href="#">Jeans</a></li>
-                      <li><a href="#">Shorts</a></li>
-                      <li><a href="#">Pants</a></li>
-                      <li><a href="#">Skirts</a></li>
-                      <li><a href="#">Joggers</a></li>
-                    </ul>
-                  </div>
-      
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>DRESSES</h5></a>
-                      </li>
-                      <li><a href="#">Jumpsuits</a></li>
-                      <li><a href="#">Midi & Maxi Dresses</a></li>
-                      <li><a href="#">Mini Dresses</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
-                      </li>
-                      <li><a href="#">Shoes</a></li>
-                      <li><a href="#">Socks</a></li>
-                      <li><a href="#">Sunglasses</a></li>
-                      <li><a href="#">Belts</a></li>
-                      <li><a href="#">Bags</a></li>
-                      <li><a href="#">Jewelry</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>DRESSES</h5></a>
-                      </li>
-                      <li><a href="#">Jumpsuits</a></li>
-                      <li><a href="#">Midi & Maxi Dresses</a></li>
-                      <li><a href="#">Mini Dresses</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>FEATURED</h5></a>
-                      </li>
-                      <li><a href="#">New Arrivals</a></li>
-                      <li><a href="#">Best Sellers</a></li>
-                      <li><a href="#">Crop Edit</a></li>
-                      <li><a href="#">Ripped Jeans</a></li>
-                      <li><a href="#">The Logo Shop</a></li>
-                      <li><a href="#">Curvy Destination</a></li>
-                      <li><a href="#">Dream Jeans</a></li>
-                      <li><a href="#">The Dress Shop</a></li>
-                      <li><a href="#">Stripe Edit</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="active">
-                <a class="hover1" href="jeans.html">Jeans</a>
-                <div class="submenu-1">
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>MENS JEANS</h5></a>
-                      </li>
-                      <li><a href="#">Skinny Jeans</a></li>
-                      <li><a href="#">Slim Jeans</a></li>
-                      <li><a href="#">Straight Jeans</a></li>
-                      <li><a href="#">Airflex Jeans</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>WOMENS JEANS</h5></a>
-                      </li>
-                      <li><a href="#">Jeggings</a></li>
-                      <li><a href="#">Bootcut Jeans</a></li>
-                      <li><a href="#">Girlfriend Jeans</a></li>
-                      <li><a href="#">Skinny Jeans</a></li>
-                      <li><a href="#">Mom Jeans</a></li>
-                      <li><a href="#">Tomgirl Jeans</a></li>
-                      <li><a href="#">Curvy Jeans</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="active">
-                <a class="hover1" style="color: red;">Sale</a>
-                <div class="submenu-1">
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>MENS SALE</h5></a>
-                      </li>
-                      <li><a href="#">Tops</a></li>
-                      <li><a href="#">Bottoms</a></li>
-                      <li><a href="#">Jeans</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5>WOMENS SALE</h5></a>
-                      </li>
-                      <li><a href="#">Tops</a></li>
-                      <li><a href="#">Jeans</a></li>
-                      <li><a href="#">BOTTOMS</a></li>
-                      <li><a href="#">Dresses</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="#"><h5 >LAST OF THE BEST</h5></a>
-                      </li>
-                      <li><a href="#"><h5 > Upto 60 percent Off</h5></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div class="secondBox">
-              <h4 id="user"></h4>
-              <p id="logout"></p>
-              <p class="searchBox">
-                <input type="text" placeholder="Search" id="search-value"/>
-                <a style="color: black" id="search-button"
-                  ><i class="fa fa-search" aria-hidden="true"></i
-                ></a>
-              </p>
-            </div>
-          </div> 
-          
-        <div class="heading">
-          <p>
-            10% off on your first purchase! Use Code: 
-            <strong>AEFIRST10</strong>
-            </p>
         </div>
-      </div>  
+      <p>
+        <a href="#" title="Favorites"
+          ><i class="fa fa-heart"></i>&nbsp;<u class="uline">Favorites</u></a
+        >
+      </p>
+      <p>
+        <a href="checkout.html" title="Items">
+          <img
+            height="12px"
+            width="12px"
+            src="https://www.freepnglogos.com/uploads/shopping-bag-png/google-white-shopping-bag-icon-kalost-14.png"
+            alt=""
+          />
+          <u id="items"></u><u class="uline">items</u></a
+        >
+      </p>
+    </div>
+        <div class="navbar_sticky">
+        <div class="menubar">
+          <a href="index.html">
+                  <img id="main-logo" src="https://i.ibb.co/3mBvfKy/fashion-mink-high-resolution-logo-black-on-white-background.jpg" alt="">
+                 </a>
+          <ul>
+            <li class="active">
+              <a class="hover1" href="men.html">Men</a>
+              <div class="submenu-1">
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>TOPS</h5></a>
+                    </li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Graphic Tees</a></li>
+                    <li><a href="#">Polo Shirts</a></li>
+                    <li><a href="#">Shirts</a></li>
+                    <li><a href="#">Jackets</a></li>
+                    <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>BOTTOMS</h5></a>
+                    </li>
+                    <li><a href="#">Jeans</a></li>
+    
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Joggers</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>UNDERWEAR</h5></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
+                    </li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Belts</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>FEATURED</h5></a>
+                    </li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Airflex shop</a></li>
+                    <li><a href="#">Ripped Jeans</a></li>
+                    <li><a href="#">The Logo Shop</a></li>
+                    <li><a href="#">Stripe Edit</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+    
+            <li class="active">
+              <a class="hover1" href="women.html">Women</a>
+              <div class="submenu-1">
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>TOPS</h5></a>
+                    </li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Shirts</a></li>
+                    <li><a href="#">Sweaters & Cardigans</a></li>
+                    <li><a href="#">Jackets</a></li>
+                    <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>BOTTOMS</h5></a>
+                    </li>
+                    <li><a href="#">Jeans</a></li>
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Pants</a></li>
+                    <li><a href="#">Skirts</a></li>
+                    <li><a href="#">Joggers</a></li>
+                  </ul>
+                </div>
+    
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>DRESSES</h5></a>
+                    </li>
+                    <li><a href="#">Jumpsuits</a></li>
+                    <li><a href="#">Midi & Maxi Dresses</a></li>
+                    <li><a href="#">Mini Dresses</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>SHOES & ACCESSORIES</h5></a>
+                    </li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Sunglasses</a></li>
+                    <li><a href="#">Belts</a></li>
+                    <li><a href="#">Bags</a></li>
+                    <li><a href="#">Jewelry</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>DRESSES</h5></a>
+                    </li>
+                    <li><a href="#">Jumpsuits</a></li>
+                    <li><a href="#">Midi & Maxi Dresses</a></li>
+                    <li><a href="#">Mini Dresses</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>FEATURED</h5></a>
+                    </li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Crop Edit</a></li>
+                    <li><a href="#">Ripped Jeans</a></li>
+                    <li><a href="#">The Logo Shop</a></li>
+                    <li><a href="#">Curvy Destination</a></li>
+                    <li><a href="#">Dream Jeans</a></li>
+                    <li><a href="#">The Dress Shop</a></li>
+                    <li><a href="#">Stripe Edit</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="active">
+              <a class="hover1" href="#">Jeans</a>
+              <div class="submenu-1">
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>MENS JEANS</h5></a>
+                    </li>
+                    <li><a href="#">Skinny Jeans</a></li>
+                    <li><a href="#">Slim Jeans</a></li>
+                    <li><a href="#">Straight Jeans</a></li>
+                    <li><a href="#">Airflex Jeans</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>WOMENS JEANS</h5></a>
+                    </li>
+                    <li><a href="#">Jeggings</a></li>
+                    <li><a href="#">Bootcut Jeans</a></li>
+                    <li><a href="#">Girlfriend Jeans</a></li>
+                    <li><a href="#">Skinny Jeans</a></li>
+                    <li><a href="#">Mom Jeans</a></li>
+                    <li><a href="#">Tomgirl Jeans</a></li>
+                    <li><a href="#">Curvy Jeans</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="active">
+              <a class="hover1" style="color: red;">Sale</a>
+              <div class="submenu-1">
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>MENS SALE</h5></a>
+                    </li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Jeans</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5>WOMENS SALE</h5></a>
+                    </li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Jeans</a></li>
+                    <li><a href="#">Dresses</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#"><h5 >LAST OF THE BEST</h5></a>
+                    </li>
+                    <li><a href="#"><h5 > Upto 60 percent Off</h5></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="secondBox">
+            <h4 id="user"></h4>
+            <p id="logout"></p>
+            <p class="searchBox">
+              <input type="text" placeholder="Search" id="search-value"/>
+              <a  style="color: black" id="search-button"
+                ><i class="fa fa-search" aria-hidden="true"></i
+              ></a>
+            </p>
+          </div>
+        </div> 
+        
+      <div class="heading">
+        <p>
+          10% off on your first purchase! Use Code: 
+          <strong>AEFIRST10</strong>
+          </p>
+      </div>
+    </div>   
     <!-- Nav Bar ends -->
     <div id="upper">
         <div>Home / Mens Wear</div>

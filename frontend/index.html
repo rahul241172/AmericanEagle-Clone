@@ -7,6 +7,7 @@
     <title>Fashion Mink</title>
     <!-- <link rel="shortcut icon"  type="png" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9RG-cAJSVhtVgPF8TZCrZrJIUAxpQD8R3Cl34RmpCIHflL2v5AixcIiPrpJJDfZq9RkM&usqp=CAU"> -->
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,7 +23,7 @@
           <a href="#"><u class="uline">Store Locator</u></a>
         </p>
         <p>
-          <a href="trackorder.html" ><u class="uline">Track Order</u></a>
+          <a href="#" ><u class="uline">Track Order</u></a>
         </p>
           <div class="dropdown bg">
             <a class="dropbtn selectColor" href="#"><u class="uline">My Aeo</u></a>
@@ -101,7 +102,7 @@
               src="https://www.freepnglogos.com/uploads/shopping-bag-png/google-white-shopping-bag-icon-kalost-14.png"
               alt=""
             />
-            <u>0</u><u class="uline">items</u></a
+            <u id="items"></u><u class="uline">items</u></a
           >
         </p>
       </div>
@@ -112,7 +113,7 @@
                    </a>
             <ul>
               <li class="active">
-                <a class="hover1" href="#">Men</a>
+                <a class="hover1" href="men.html">Men</a>
                 <div class="submenu-1">
                   <div>
                     <ul>
@@ -251,7 +252,7 @@
                 </div>
               </li>
               <li class="active">
-                <a class="hover1" href="jeans.html">Jeans</a>
+                <a class="hover1" href="#">Jeans</a>
                 <div class="submenu-1">
                   <div>
                     <ul>
@@ -337,14 +338,14 @@
     <!-- Nav Bar ends -->
       <div class="first_img">
         <div class="btn1">
-          <button>Shop Men Jeans</button>
-          <button>Shop Women Jeans</button>
+          <button><a href="men.html">Shop Men Jeans</a></button>
+          <button><a href="women.html">Shop Women Jeans</a></button>
         </div>
       </div> 
       <div class="sec_img">
         <div class="btn2">
-          <button><a href="tshirts.html" style="color: white;">Shop Men</a></button>
-          <button>Shop Women</button>
+          <button><a href="men.html" style="color: white;">Shop Men</a></button>
+          <button><a href="women.html" style="color: white;">Shop Men</a></button>
         </div>
       </div>
 
@@ -355,7 +356,7 @@
       </div>
       <div class="forth_img">
         <div class="btn4">
-          <button><a href="#" style="color: white;">Shop Real Good Jeans</a></button>
+          <button><a href="men.html" style="color: white;">Shop Real Good Jeans</a></button>
           <button>Read More</button>
         </div>
       </div>

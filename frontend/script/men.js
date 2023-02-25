@@ -76,7 +76,7 @@ function getAsCard(id, image, name, price, type, category) {
     `;
 }
 
-// pagination 
+// pagination--------------------------------------------------------------------------------------------
 
 function renderPagination(numOfPages) {
 
@@ -101,7 +101,6 @@ function renderPagination(numOfPages) {
         btn.addEventListener('click', (e) => {
             let dataId = e.target.dataset.id;
             var newarr = arr.slice((dataId - 1) * 15, 15 * dataId)
-            btn.style="color:blue"
             getData(newarr);
         })
     }
@@ -290,15 +289,15 @@ console.log(obj)
         }).then(res=>res.json())
         .then((res)=>{
                 if(res.msg=="Product Added sucessfully"){
-                alert("Added to cart")
+                swal("Added to cart", "", "success")
                 }
                 else{
-                    alert("Already in cart")
+                swal("Already in Cart!", "Add Something else!", "warning")
                 }
     })
 }
 else{
-    alert("please login first")
+swal("Please login first", "", "warning")
 }
 })
 }

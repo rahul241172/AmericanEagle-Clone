@@ -54,10 +54,10 @@ function signUp() {
     }).then(res=>res.json())
     .then((res)=>{
         if(res.msg=="Already registered"){
-            alert("Already registered")
+        swal("Already registered", "Please login", "warning")
         }
         else{
-            alert("Registered")
+        swal("Registered", "Please login", "success")
         }
 
     })
@@ -85,10 +85,10 @@ fetch(`${baseUrl}/users/login`,{
 }).then(res=>res.json())
 .then((res)=>{
     if(res.msg=="wrong credentials"){
-        alert("wrong credentials")
+        swal("wrong credentials", "Please try again with the correct details", "warning")
     }
     else{
-        alert("Login Success")
+        swal("Login Success", "", "success")
         userdata=res.data
        username.innerHTML=userdata[0].name
         Logout.innerHTML="Logout"
@@ -108,7 +108,7 @@ Logout.addEventListener("click",()=>{
     localStorage.clear()
     username.innerHTML=""
     Logout.innerHTML=""
-    alert("Logout sucessfully")
+swal("Logout sucessfully", "", "success")
     window.location.href="#"
 })
 
@@ -132,7 +132,7 @@ fetch(`${baseUrl}/users/login`,{
 }).then(res=>res.json())
 .then((res)=>{
     if(res.msg=="wrong credentials"){
-        alert("wrong credentials")
+        swal("wrong credentials", "Please try again with the correct details", "warning")
     }
     else{
         if( res.data[0].name=="admin" &&  res.data[0].email=="admin"){
@@ -140,7 +140,7 @@ fetch(`${baseUrl}/users/login`,{
             localStorage.setItem("token",res.token)
         }
         else{
-                alert("wrong credentials")
+            swal("wrong credentials", "Please try again with the correct details", "warning")
         }
     }
 })

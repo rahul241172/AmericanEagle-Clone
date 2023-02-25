@@ -171,13 +171,13 @@ let sumbit=document.getElementById("coupon-submit")
 
 sumbit.addEventListener("click",()=>{
     if(coupon.value=="AEFIRST10"){
-        alert("Coupon Applied")
+        swal("Coupon Applied", "", "success")
     ordervalue.innerText=totalprice-(totalprice*10/100)
     let store=totalprice-(totalprice*10/100)
     localStorage.setItem("total",JSON.stringify(store))
     }
     else{
-        alert("Invalid Coupon")
+        swal("Invalid Coupon", "Please try with the correct one", "warning")
     }
 })
 
