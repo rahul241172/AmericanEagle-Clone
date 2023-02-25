@@ -821,3 +821,16 @@
   .price::before{
     content: "\20B9";
   }
+
+
+
+
+  /* media query for products */
+
+  @media screen and (min-width:301px) and (max-width:800px) {
+    .card-list{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+    }
+  }

@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080"
+let baseUrl = "https://blue-coypu-gear.cyclic.app"
 
 // show user details -------------------------------------------------------
 let token=localStorage.getItem("token")

@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost:8080"
+var baseUrl = "https://blue-coypu-gear.cyclic.app"
 var popup = document.querySelector(".popup");
 var close = document.querySelector(".close");
 
