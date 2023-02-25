@@ -7,8 +7,12 @@ For the frontend, I have used HTML and CSS JavaScript and for the backend I've  
 <p>Home Page</p>
 <img src="https://i.ibb.co/thfT1Pc/homepage-1.png">
 <img src="https://i.ibb.co/0Xnft6q/homepage-2.png">
-<p>Product Page</p>
-<img src="">
+<p>Mens Page</p>
+<img src="https://i.ibb.co/zmwsHFN/mens-page.png">
+<p>Womens Page</p>
+<img src="https://i.ibb.co/wdtQFf0/womens.png">
+<p>Cart Page</p>
+<img src="https://i.ibb.co/zhhGrRf/cartpage.png">
 
 
 
