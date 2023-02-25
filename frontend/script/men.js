@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost:8080"
+var baseUrl = "https://blue-coypu-gear.cyclic.app"
 let paginationWrapper = document.getElementById("pagination-wrapper")
 // Dropdown Filter menubar
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -297,7 +297,9 @@ console.log(obj)
     })
 }
 else{
-swal("Please login first", "", "warning")
+swal("Please login first", "", "warning").then(()=>{
+    window.location.href="index.html"
+})
 }
 })
 }

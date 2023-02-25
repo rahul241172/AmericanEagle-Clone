@@ -2,7 +2,7 @@
 // cart item
 
 var arr
-var baseUrl = "http://localhost:8080"
+var baseUrl = "https://blue-coypu-gear.cyclic.app"
 let cont=document.getElementById("order-container")
 let totalbill=document.querySelector("#total-price")
 var totalprice
