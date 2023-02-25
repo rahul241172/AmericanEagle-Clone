@@ -16,7 +16,7 @@ For the frontend, I have used HTML and CSS JavaScript and for the backend I've  
 
 
 # Key Features (Users side)
-1.Login/Signup.<br><br>
+1.Login/Signup.<br>
 2.Add to Cart (only when Login).<br>
 3.User's own cart when he is login.<br>
 4.Search,Sort,filter products.<br>
@@ -27,7 +27,7 @@ For the frontend, I have used HTML and CSS JavaScript and for the backend I've  
 # Key Features (Admin side)
 1.Able to view all users and delete users as well.<br>
 2.Admin is able to Add,Delete,Update the products.<br>
-5.Pagination on Admin portal as well.<br>
+3.Pagination on Admin portal as well.<br>
 
 
 <p>To see my Project click this link 👉:
