@@ -1,17 +1,23 @@
 let baseUrl = "http://localhost:8080"
 
 // show user details -------------------------------------------------------
-
+let token=localStorage.getItem("token")
 let dataListWrapper = document.querySelector(".data-list-wrapper");
 let showUsersButton = document.querySelector(".show-user-details");
 showUsersButton.addEventListener("click", async function () {
     try {
-        num = 3;
-        let res = await fetch(`${baseUrl}/users`);
+        let res = await fetch(`${baseUrl}/users`,{
+            method:"GET",
+            headers:{
+                "Authorization":token
+            }
+        });
         let data = await res.json();
         dispaly_data(data)
+        let length=document.getElementById("data-length")
+        length.innerText=`Total:${data.length}`
     } catch (error) {
-        console.log("error")
+        console.log(error)
     }
 });
 
@@ -24,8 +30,7 @@ function dispaly_data(data) {
                 let id = item._id;
                 let username = item.name;
                 let email = item.email;
-                let password = item.pass;
-                return userCard(id, username, email, password);
+                return userCard(id, username, email);
             })
             .join("")}
       </div>
@@ -34,13 +39,12 @@ function dispaly_data(data) {
 }
 
 
-function userCard(id, username, email, password) {
+function userCard(id, username, email) {
     return `
         <div class="card-wrapper">
         <span>ID</span><input id="id" value="${id}"  readonly>
         <span>username</span><input id="title" value="${username}"  readonly>
         <span>email</span><input id="hour" value="${email}"  readonly>
-        <span>password</span><input value="${password}"  readonly>
         </div>
     `;
 }
@@ -117,10 +121,12 @@ async function deleteFunction(data) {
     try {
 
         let res = await fetch(`${baseUrl}/products/delete/${data}`, {
-            method: "DELETE"
+            method: "DELETE",
+            headers:{
+                "Authorization":token
+            }
         });
        Fetching();
-
     } catch (error) {
         console.log(error)
     }
@@ -157,6 +163,8 @@ async function Fetching() {
         let res = await fetch(`${baseUrl}/products`);
         let data = await res.json();
         getData(data);
+        let length=document.getElementById("data-length")
+        length.innerText=`Total:${data.length}`
         }
     catch (error) {
         console.log(error);
@@ -174,10 +182,11 @@ function addproduct() {
     dataListWrapper.innerHTML = "";
     dataListWrapper.innerHTML = `
         <div class="card-wrapper">
-        <span></span><input id="addtitle">
-        <span>Description</span><input id="addDescription">
+        <span>Name</span><input id="addDescription">
         <span>Price</span><input id="addprice">
         <span>Image Url</span><input id="addimage">
+        <span>Type</span><input id="addtype">
+        <span>Category</span><input id="addcategory">
           <div class="list-buttons">
           <button class="save-data">Save</button>
           </div>
@@ -189,19 +198,19 @@ function addproduct() {
 
     let savingProduct = document.querySelector(".save-data");
     savingProduct.addEventListener("click", () => {
-        let name = document.querySelector("#addtitle").value;
-        let description = document.querySelector("#addDescription").value;
+        let name = document.querySelector("#addDescription").value;
         let price = document.querySelector("#addprice").value;
         let image = document.querySelector("#addimage").value;
-        let warranty = document.querySelector("#addwarranty").value;
-
+        let type = document.querySelector("#addtype").value;
+        let category = document.querySelector("#addcategory").value;
+        let amount=+price
 
         let obj = {
             name,
-            description,
-            price,
+            price:amount,
             image,
-            warranty
+            type,
+            category
         };
 
         saveProduct(obj);
@@ -210,30 +219,23 @@ function addproduct() {
 
 async function saveProduct(data) {
     try {
-        let res = await fetch(`${baseUrl}/products/create`, {
+        let res = await fetch(`${baseUrl}/products/add`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                    "Authorization":token
+    
             },
             body: JSON.stringify(data)
         });
-        if (res.ok) {
-            alert("product Added")
-            // pageNot.innerText = "Course Successfully Added";
-            // notification();
-            // title = document.querySelector("#addtitle");
-            // addcourse = document.querySelector("#addcourse");
-            // addlesson = document.querySelector("#addlesson");
-            // addhour = document.querySelector("#addhour");
-            // adddescription = document.querySelector("#adddescription");
-            // title.value = "";
-            // addcourse.value = "";
-            // addlesson.value = "";
-            // addhour.value = "";
-            // adddescription.value = "";
+        let ans= await res.json()
+        if (ans.msg=="Product Added sucessfully") {
+            alert("Product Added sucessfully")
+        }
+        else{
+           console.log(ans)
         }
     } catch (error) {
-        // notification();
         console.log(error)
     }
 }

@@ -112,3 +112,36 @@ Logout.addEventListener("click",()=>{
     window.location.href="#"
 })
 
+
+
+//  Admin Login 
+let adminbutton=document.getElementById("admin")
+
+adminbutton.addEventListener("click",()=>{
+    var email = document.querySelector("#email").value;
+    var pass = document.querySelector("#pass").value;
+let obj={
+    email,password:pass
+}
+fetch(`${baseUrl}/users/login`,{
+    method:"POST",
+    headers:{
+        "Content-type":"application/json"
+    },
+    body:JSON.stringify(obj)
+}).then(res=>res.json())
+.then((res)=>{
+    if(res.msg=="wrong credentials"){
+        alert("wrong credentials")
+    }
+    else{
+        if( res.data[0].name=="admin" &&  res.data[0].email=="admin"){
+            window.location.href="admin.html"
+            localStorage.setItem("token",res.token)
+        }
+        else{
+                alert("wrong credentials")
+        }
+    }
+})
+})

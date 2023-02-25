@@ -1,13 +1,15 @@
 const express=require("express")
 const {UserModel}=require("../models/User.model")
 const users=express.Router()
-
+const {authorization}=require("../middleware/authorization")
 var jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 
-users.get("/",async(req,res)=>{
+users.get("/",authorization,async(req,res)=>{
     let q=req.headers.authorization
+    // let user=req.body.userID
+    // let name=req.body.name
     jwt.verify(q,process.env.jwtsecret,async(err, decoded)=>{
         if(decoded){
             try{

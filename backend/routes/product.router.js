@@ -80,17 +80,9 @@ products.patch("/update/:id",authorization,async(req,res)=>{
 
     products.delete("/delete/:id",authorization,async(req,res)=>{
     let id=req.params.id
-    let note=await ProductModel.findOne({_id:id})
-    let user=note.userID
-    let user_making_req=req.body.userID
     try{
-        if(user==user_making_req){
             let data=await ProductModel.findByIdAndDelete({_id:id})
-            res.send("deleted")
-        }
-        else{
-            res.send("you are not authorized")  
-        }
+            res.send({msg:"deleted"})
     }catch(err){
         console.log(err)
     }
