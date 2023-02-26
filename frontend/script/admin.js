@@ -140,7 +140,7 @@ function getData(data) {
                 let price = item.price;
                 let type = item.type;
                 let category = item.category;
-                return getAsCard(id, image, name,price, type, category);
+                return getAsCard(id, image, price,name, type, category);
             })
             .join("")}
       </div>
