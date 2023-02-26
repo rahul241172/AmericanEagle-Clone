@@ -31,5 +31,5 @@ For the frontend, I have used HTML and CSS JavaScript and for the backend I've  
 
 
 <p>To see my Project click this link 👉:
-  <a href="">Deployed-link</a>
+  <a href="https://fashionmink.netlify.app/women.html">Deployed-link</a>
 </p>
